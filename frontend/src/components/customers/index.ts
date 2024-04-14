@@ -1,3 +1,4 @@
 import { Navigation } from "./Navigation";
+import { HomeCarousel } from './HomeCarousel';
 
-export { Navigation };
+export { Navigation, HomeCarousel };

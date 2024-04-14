@@ -1,9 +1,10 @@
-import { Navigation } from "./components/customers";
+import { HomeCarousel, Navigation } from "./components/customers";
 
 function App() {
   return (
     <>
       <Navigation />
+      <HomeCarousel />
     </>
   );
 }

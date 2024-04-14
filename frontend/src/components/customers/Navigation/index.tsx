@@ -242,7 +242,7 @@ export const Navigation = () => {
                           ))}
                         </div>
                         {category.sections.map((section) => (
-                          <div key={section.name}>
+                          <div  key={section.name}>
                             <p
                               id={`${category.id}-${section.id}-heading-mobile`}
                               className="font-medium text-foreground-900"
@@ -384,7 +384,7 @@ export const Navigation = () => {
                                 aria-hidden="true"
                               />
 
-                              <div className="relative bg-background">
+                              <div className="relative bg-background z-10">
                                 <div className="mx-auto max-w-7xl px-8">
                                   <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
                                     <div className="col-start-2 grid grid-cols-2 gap-x-8">
