@@ -146,7 +146,7 @@ export const Navigation = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-background">
+    <div data-testId="navigation" className="bg-background">
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-40 lg:hidden" onClose={setOpen}>

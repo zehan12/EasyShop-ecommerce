@@ -1,6 +1,4 @@
-// import { Navigation } from "./components/customers";
-
-import { Navigation } from "./components/customers/Navigation/index";
+import { Navigation } from "./components/customers";
 
 function App() {
   return (
