@@ -1,9 +1,11 @@
+// import { Navigation } from "./components/customers";
+
+import { Navigation } from "./components/customers/Navigation/index";
+
 function App() {
   return (
     <>
-      <h1 className="text-center text-3xl underline hover:text-purple-400 p-3 cursor-pointer">
-        E commerce
-      </h1>
+      <Navigation />
     </>
   );
 }
