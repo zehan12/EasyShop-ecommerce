@@ -146,7 +146,7 @@ export const Navigation = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-white">
+    <div className="bg-background">
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-40 lg:hidden" onClose={setOpen}>
@@ -172,11 +172,11 @@ export const Navigation = () => {
               leaveFrom="translate-x-0"
               leaveTo="-translate-x-full"
             >
-              <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-white pb-12 shadow-xl">
+              <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-background pb-12 shadow-xl">
                 <div className="flex px-4 pb-2 pt-5">
                   <button
                     type="button"
-                    className="relative -m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400"
+                    className="relative -m-2 inline-flex items-center justify-center rounded-md p-2 text-foreground-400"
                     onClick={() => setOpen(false)}
                   >
                     <span className="absolute -inset-0.5" />
@@ -196,7 +196,7 @@ export const Navigation = () => {
                             classNames(
                               selected
                                 ? "border-indigo-600 text-indigo-600"
-                                : "border-transparent text-gray-900",
+                                : "border-transparent text-foreground-900",
                               "flex-1 whitespace-nowrap border-b-2 px-1 py-4 text-base font-medium"
                             )
                           }
@@ -227,7 +227,7 @@ export const Navigation = () => {
                               </div>
                               <a
                                 href={item.href}
-                                className="mt-6 block font-medium text-gray-900"
+                                className="mt-6 block font-medium text-foreground-900"
                               >
                                 <span
                                   className="absolute inset-0 z-10"
@@ -245,7 +245,7 @@ export const Navigation = () => {
                           <div key={section.name}>
                             <p
                               id={`${category.id}-${section.id}-heading-mobile`}
-                              className="font-medium text-gray-900"
+                              className="font-medium text-foreground-900"
                             >
                               {section.name}
                             </p>
@@ -258,7 +258,7 @@ export const Navigation = () => {
                                 <li key={item.name} className="flow-root">
                                   <a
                                     href={item.href}
-                                    className="-m-2 block p-2 text-gray-500"
+                                    className="-m-2 block p-2 text-foreground-500"
                                   >
                                     {item.name}
                                   </a>
@@ -277,7 +277,7 @@ export const Navigation = () => {
                     <div key={page.name} className="flow-root">
                       <a
                         href={page.href}
-                        className="-m-2 block p-2 font-medium text-gray-900"
+                        className="-m-2 block p-2 font-medium text-foreground-900"
                       >
                         {page.name}
                       </a>
@@ -289,7 +289,7 @@ export const Navigation = () => {
                   <div className="flow-root">
                     <a
                       href="#"
-                      className="-m-2 block p-2 font-medium text-gray-900"
+                      className="-m-2 block p-2 font-medium text-foreground-900"
                     >
                       Sign in
                     </a>
@@ -297,7 +297,7 @@ export const Navigation = () => {
                   <div className="flow-root">
                     <a
                       href="#"
-                      className="-m-2 block p-2 font-medium text-gray-900"
+                      className="-m-2 block p-2 font-medium text-foreground-900"
                     >
                       Create account
                     </a>
@@ -307,7 +307,7 @@ export const Navigation = () => {
                 <div className="border-t border-gray-200 px-4 py-6">
                   <a href="#" className="-m-2 flex items-center p-2">
                     <Radiation />
-                    <span className="ml-3 block text-base font-medium text-gray-900">
+                    <span className="ml-3 block text-base font-medium text-foreground-900">
                       CAD
                     </span>
                     <span className="sr-only">, change currency</span>
@@ -319,7 +319,7 @@ export const Navigation = () => {
         </Dialog>
       </Transition.Root>
 
-      <header className="relative bg-white">
+      <header className="relative bg-background">
         <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
           Get free delivery on orders over $100
         </p>
@@ -332,7 +332,7 @@ export const Navigation = () => {
             <div className="flex h-16 items-center">
               <button
                 type="button"
-                className="relative rounded-md bg-white p-2 text-gray-400 lg:hidden"
+                className="relative rounded-md bg-background p-2 text-foreground-400 lg:hidden"
                 onClick={() => setOpen(true)}
               >
                 <span className="absolute -inset-0.5" />
@@ -360,7 +360,7 @@ export const Navigation = () => {
                               className={classNames(
                                 open
                                   ? "border-indigo-600 text-indigo-600"
-                                  : "border-transparent text-gray-700 hover:text-gray-800",
+                                  : "border-transparent text-foreground-700 hover:text-foreground-800",
                                 "relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out"
                               )}
                             >
@@ -377,14 +377,14 @@ export const Navigation = () => {
                             leaveFrom="opacity-100"
                             leaveTo="opacity-0"
                           >
-                            <Popover.Panel className="absolute inset-x-0 top-full text-sm text-gray-500">
+                            <Popover.Panel className="absolute inset-x-0 top-full text-sm text-foreground-500">
                               {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
                               <div
-                                className="absolute inset-0 top-1/2 bg-white shadow"
+                                className="absolute inset-0 top-1/2 bg-background shadow"
                                 aria-hidden="true"
                               />
 
-                              <div className="relative bg-white">
+                              <div className="relative bg-background">
                                 <div className="mx-auto max-w-7xl px-8">
                                   <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
                                     <div className="col-start-2 grid grid-cols-2 gap-x-8">
@@ -402,7 +402,7 @@ export const Navigation = () => {
                                           </div>
                                           <a
                                             href={item.href}
-                                            className="mt-6 block font-medium text-gray-900"
+                                            className="mt-6 block font-medium text-foreground-900"
                                           >
                                             <span
                                               className="absolute inset-0 z-10"
@@ -424,7 +424,7 @@ export const Navigation = () => {
                                         <div key={section.name}>
                                           <p
                                             id={`${section.name}-heading`}
-                                            className="font-medium text-gray-900"
+                                            className="font-medium text-foreground-900"
                                           >
                                             {section.name}
                                           </p>
@@ -440,7 +440,7 @@ export const Navigation = () => {
                                               >
                                                 <a
                                                   href={item.href}
-                                                  className="hover:text-gray-800"
+                                                  className="hover:text-foreground-800"
                                                 >
                                                   {item.name}
                                                 </a>
@@ -464,7 +464,7 @@ export const Navigation = () => {
                     <a
                       key={page.name}
                       href={page.href}
-                      className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                      className="flex items-center text-sm font-medium text-foreground-700 hover:text-foreground-800"
                     >
                       {page.name}
                     </a>
@@ -476,14 +476,14 @@ export const Navigation = () => {
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   <a
                     href="#"
-                    className="text-sm font-medium text-gray-700 hover:text-gray-800"
+                    className="text-sm font-medium text-foreground-700 hover:text-foreground-800"
                   >
                     Sign in
                   </a>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
                   <a
                     href="#"
-                    className="text-sm font-medium text-gray-700 hover:text-gray-800"
+                    className="text-sm font-medium text-foreground-700 hover:text-foreground-800"
                   >
                     Create account
                   </a>
@@ -492,7 +492,7 @@ export const Navigation = () => {
                 <div className="hidden lg:ml-8 lg:flex">
                   <a
                     href="#"
-                    className="flex items-center text-gray-700 hover:text-gray-800"
+                    className="flex items-center text-foreground-700 hover:text-foreground-800"
                   >
                     <img
                       src="https://tailwindui.com/img/flags/flag-canada.svg"
@@ -506,7 +506,7 @@ export const Navigation = () => {
 
                 {/* Search */}
                 <div className="flex lg:ml-6">
-                  <a href="#" className="p-2 text-gray-400 hover:text-gray-500">
+                  <a href="#" className="p-2 text-foreground-400 hover:text-foreground-500">
                     <span className="sr-only">Search</span>
                     <MagnifyingGlassIcon
                       className="h-6 w-6"
@@ -519,10 +519,10 @@ export const Navigation = () => {
                 <div className="ml-4 flow-root lg:ml-6">
                   <a href="#" className="group -m-2 flex items-center p-2">
                     <ShoppingBagIcon
-                      className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
+                      className="h-6 w-6 flex-shrink-0 text-foreground-400 group-hover:text-foreground-500"
                       aria-hidden="true"
                     />
-                    <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
+                    <span className="ml-2 text-sm font-medium text-foreground-700 group-hover:text-foreground-800">
                       0
                     </span>
                     <span className="sr-only">items in cart, view bag</span>
