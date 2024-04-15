@@ -7,18 +7,21 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-export const ProductCarouselCard = ({ title, image }) => {
+import { Product } from "@/types";
+import { FC } from "react";
+
+export const ProductCarouselCard: FC<Product> = ({ title, image }) => {
   return (
     <Card key={title} className="w-[250px]">
       <CardHeader>
         <img
           className=" object-contain h-[12rem] w-full"
           src={image}
-          alt="T-Shirt"
+          alt={title}
         />
       </CardHeader>
       <CardContent className="h-20">
-        <CardTitle className="text-sm">Nike {title}</CardTitle>
+        <CardTitle className="text-sm">{title}</CardTitle>
         <CardDescription>Nike T-shirt.</CardDescription>
       </CardContent>
       <CardFooter>

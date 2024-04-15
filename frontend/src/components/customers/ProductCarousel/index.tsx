@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { FC, Fragment } from "react";
 import Slider from "react-slick";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ProductCarouselCard } from "../ProductCarouselCard";
@@ -40,7 +40,11 @@ export const ProductCarousel = ({ products }: ProductCarouselProps) => {
   );
 };
 
-const PreviousButton = ({ onClick }: { onClick: () => void }) => {
+interface SliderButtonProps {
+  onClick: () => void;
+}
+
+const PreviousButton: FC<SliderButtonProps> = ({ onClick }) => {
   return (
     <Button
       size={"icon"}
@@ -53,7 +57,7 @@ const PreviousButton = ({ onClick }: { onClick: () => void }) => {
     </Button>
   );
 };
-const NextButton = ({ onClick }: { onClick: () => void }) => {
+const NextButton: FC<SliderButtonProps> = ({ onClick }) => {
   return (
     <Button
       size={"icon"}

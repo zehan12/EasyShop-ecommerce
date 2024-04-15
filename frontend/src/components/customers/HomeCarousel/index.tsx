@@ -39,6 +39,9 @@ const data = [
   {
     image: "https://picstatio.com/large/llqzur/Jackie-2016-movie-wallpaper.jpg",
   },
+  {
+    image: "https://images.hdqwalls.com/wallpapers/vittoria-ceretti-lm.jp",
+  },
 ];
 
 export const HomeCarousel = () => {
@@ -48,7 +51,7 @@ export const HomeCarousel = () => {
   return (
     <div>
       <AliceCarousel
-d        items={items}
+        items={items}
         disableButtonsControls
         autoPlay
         autoPlayInterval={1000}
