@@ -1,3 +1,4 @@
+import { Footer } from "./components/common";
 import {
   HomeCarousel,
   Navigation,
@@ -13,6 +14,7 @@ function App() {
       <div className="space-y-10 py-20 flex  flex-col justify-center px-5 lg:px-5">
         <ProductCarousel products={data} />
       </div>
+      <Footer />
     </>
   );
 }
