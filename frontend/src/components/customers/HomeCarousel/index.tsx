@@ -40,8 +40,10 @@ const data = [
     image: "https://picstatio.com/large/llqzur/Jackie-2016-movie-wallpaper.jpg",
   },
   {
-    image: "https://images.hdqwalls.com/wallpapers/vittoria-ceretti-lm.jp",
+    image:
+      "https://hips.hearstapps.com/hmg-prod/images/mireia-oriol-alma-netflix-esquire-1660718710.jpg?crop=0.864xw:0.685xh;0.0259xw,0.176xh&resize=2048:*",
   },
+  { image: "https://img.ccma.cat/multimedia/png/7/1/1697731053817_3840.png" },
 ];
 
 export const HomeCarousel = () => {
