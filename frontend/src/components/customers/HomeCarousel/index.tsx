@@ -44,7 +44,17 @@ const data = [
       "https://hips.hearstapps.com/hmg-prod/images/mireia-oriol-alma-netflix-esquire-1660718710.jpg?crop=0.864xw:0.685xh;0.0259xw,0.176xh&resize=2048:*",
   },
   { image: "https://img.ccma.cat/multimedia/png/7/1/1697731053817_3840.png" },
+  {
+    image:
+      "https://w.forfun.com/fetch/b9/b986f4be7841dcbf3245baf31192b983.jpeg?w=1470&r=0.5625",
+  },
+  {
+    image:
+      "https://mir-s3-cdn-cf.behance.net/project_modules/fs/f4d26825140111.563421309f2c3.JPG",
+  },
+  {image:""}
 ];
+
 
 export const HomeCarousel = () => {
   const items = data.map((item) => (
