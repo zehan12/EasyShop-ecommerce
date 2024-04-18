@@ -3,13 +3,10 @@ package com.ecommerce.model;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.hibernate.annotations.Cascade;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.CollectionTable;
+import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.GeneratedValue;
@@ -24,13 +21,17 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Column(name = "first_name")
     private String firstName;
 
+    @Column(name = "last_name")
     private String lastName;
 
-    private String email;
-
+    @Column(name = "password")
     private String password;
+
+    @Column(name = "email")
+    private String email;
 
     private String role;
 
@@ -42,7 +43,7 @@ public class User {
     @Embedded
     @ElementCollection
     @CollectionTable(name = "payment_information", joinColumns = @JoinColumn(name = "user_id"))
-    private List<Paymentinfromation> paymentInformation = new ArrayList<>();
+    private List<PaymentInformation> paymentInformation = new ArrayList<>();
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     @JsonIgnore
