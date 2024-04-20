@@ -1,5 +1,12 @@
 {
     "java.compile.nullAnalysis.mode": "disabled",
     "java.debug.settings.onBuildFailureProceed": true,
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "cSpell.words": [
+        "auths",
+        "ecommerce",
+        "Jwts",
+        "Servlet",
+        "signin"
+    ]
 }
