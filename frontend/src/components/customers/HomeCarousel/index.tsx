@@ -52,7 +52,8 @@ const data = [
     image:
       "https://mir-s3-cdn-cf.behance.net/project_modules/fs/f4d26825140111.563421309f2c3.JPG",
   },
-  {image:""}
+  {image:"https://images.squarespace-cdn.com/content/v1/55f45174e4b0fb5d95b07f39/1518364808422-469UKM0MGRSX9JYWIYTI/natalie-portman-cass-bird-porter-25-+%284%29.jpg?format=2500w"},
+  {image:"https://images.squarespace-cdn.com/content/v1/55f45174e4b0fb5d95b07f39/1713308126800-4FNIAEJ0N2BJSPHKJ3T5/Vittoria-Ceretti-by-Thibaut-Grevet-Dazed-Spring-2024-3.jpeg"}
 ];
 
 
