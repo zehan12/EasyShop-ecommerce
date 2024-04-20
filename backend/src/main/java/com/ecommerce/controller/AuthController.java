@@ -67,7 +67,7 @@ public class AuthController {
         return new ResponseEntity<AuthResponse>(authResponse, HttpStatus.CREATED);
     }
 
-    @PostMapping("/signin")
+    @PostMapping("/login")
     public ResponseEntity<AuthResponse> loginUserHandler(@RequestBody LoginRequest loginRequest) throws UserException {
         String username = loginRequest.getEmail();
         String password = loginRequest.getPassword();
