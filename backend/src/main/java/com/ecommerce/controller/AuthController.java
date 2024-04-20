@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ecommerce.config.JwtProvider;
+import com.ecommerce.dto.LoginUserDto;
 import com.ecommerce.exception.UserException;
 import com.ecommerce.model.User;
 import com.ecommerce.repository.UserRepository;
-import com.ecommerce.request.LoginRequest;
 import com.ecommerce.response.AuthResponse;
 import com.ecommerce.service.CustomUserServiceImplementation;
 
@@ -68,9 +68,9 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<AuthResponse> loginUserHandler(@RequestBody LoginRequest loginRequest) throws UserException {
-        String username = loginRequest.getEmail();
-        String password = loginRequest.getPassword();
+    public ResponseEntity<AuthResponse> loginUserHandler(@RequestBody LoginUserDto loginUserDto) throws UserException {
+        String username = loginUserDto.getEmail();
+        String password = loginUserDto.getPassword();
         Authentication authentication = authenticate(username, password);
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String token = jwtProvider.generateToken(authentication);

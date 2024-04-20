@@ -1,10 +1,10 @@
-package com.ecommerce.request;
+package com.ecommerce.dto;
 
-public class LoginRequest {
+public class LoginUserDto {
     private String email;
     private String password;
 
-    public LoginRequest() {
+    public LoginUserDto() {
     }
 
     public String getEmail() {
