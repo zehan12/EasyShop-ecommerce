@@ -8,6 +8,6 @@ public class HomeController {
 
     @RequestMapping("/")
     public String home() {
-        return "api is running!";
+        return "🚀 Hold on tight! Our API is blazing away! 🔥";
     }
 }
