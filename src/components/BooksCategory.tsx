@@ -29,7 +29,7 @@ const BooksCategory = () => {
   }, []);
 
   if (error) {
-    return <div>{error}</div>;
+    null;
   }
 
   return (
