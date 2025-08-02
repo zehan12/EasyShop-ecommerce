@@ -39,7 +39,7 @@ const Footer = () => {
                 zehan9211@gmail.com
               </a>
               <a href="tel:+91 9024172911" className="block mt-1">
-                +91 9400344657
+                +91 9024172911
               </a>
 
               <div className="flex flex-wrap gap-3 items-center mt-4">
