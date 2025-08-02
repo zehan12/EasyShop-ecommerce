@@ -1,8 +1,14 @@
 import { promises as fs } from 'fs';
-import path from 'path';
 import mongoose from 'mongoose';
+import dotenv from "dotenv"
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
+const __dirname = path.dirname(__filename); //
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://easyshop-mongodb:27017/easyshop';
+dotenv.config({ path: '.env' });
+
+const MONGODB_URI = process.env.MONGODB_URI as string;
 const scriptDir = path.resolve(path.dirname(''));
 
 // Product Schema
